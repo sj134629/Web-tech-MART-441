@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500;600&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap');
+
+body {
+
+
+}
+/* background image */
+#background-img {
+  background-image: url("../imgs/lady.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#title {
+  height: 500px;
+}
+/*div properties */
+.main {
+  box-sizing: border-box;
+  background-color: #8d07a8;
+  opacity: 0.75;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
+  padding: 2em;
+  overflow: auto;
+  text-align: center;
+  color: white;
+}
+
+.main2 {
+  background-color: #0059b3;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 3em;
+  overflow: auto;
+  text-align: center;
+  color: white;
+
+
+}
+/*skills list */
+li {
+  text-align: left;
+  font-size: 2em;
+  font-family: 'Open Sans', sans-serif;
+
+}
+/*contact social links */
+.social {
+  font-size: 1.5em;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+}
+/* header title tags*/
+h1 {
+  margin-top: 120px;
+  font-family: 'Pacifico', cursive;
+ font-size: 3em;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+}
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.7em;
+}
+
+#header {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  text-align: left;
+}
+/* navigation menu */
+.nav {
+  background-color: #0059b3;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 30px;
+  padding: .5em;
+  overflow: auto;
+  text-align: center;
+  color: white;
+
+}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #004d99;
+}
+.nav li {
+  float: left;
+  font-size: 1em;
+}
+.nav li a {
+  display: block;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav li a:hover {
+  background-color: black;
+}
