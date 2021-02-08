@@ -1,5 +1,5 @@
 // im trying to make just this function show up first without the second function showing up. Once I hit submit on this funtion it will then move on to the second function saying hi so and so and then it will go on to the story in the none parameter functions
-
+var restartButton;
 
 function getName(greeting)
            {
@@ -47,6 +47,7 @@ function getChoice2()
     document.getElementById("choice4").style.display="block";
     document.getElementById("submit4").style.display="block";
 
+    document.getElementById("mainImage").src ="./img/pepsi.jpg";
     myQuestion.innerHTML = "Coke is yummy!";
   }
   else if (myChoice === "pepsi") {
@@ -55,6 +56,8 @@ function getChoice2()
 
     document.getElementById("choice4").style.display="block";
     document.getElementById("submit4").style.display="block";
+
+    document.getElementById("mainImage").src ="./img/pepsi.jpg";
     myQuestion.innerHTML = "Pepsi is a good choice";
   }
   else {
@@ -94,11 +97,11 @@ function getChoice4()
   var myChoice = document.getElementById("choice4").value;
   var myQuestion = document.getElementById("question");
   if (myChoice === "cookies") {
-    myQuestion.innerHTML = "cookies are better than cake.";
+    myQuestion.innerHTML = "cookies are better than cake. You helped Kendera get a meal for her family, play again";
   }
   else if (myChoice === "cake") {
 
-    myQuestion.innerHTML = "cake is better than cookies.";
+    myQuestion.innerHTML = "cake is better than cookies. You helped Kendera get a meal for her family, play again";
   }
   else {
     myQuestion.innerHTML = "Invalid Answer";
@@ -110,18 +113,27 @@ function getChoice5()
   var myChoice = document.getElementById("choice5").value;
   var myQuestion = document.getElementById("question");
   if (myChoice === "breadsticks") {
-    document.getElementById("choice2").style.display="none";
-    document.getElementById("submit2").style.display="none";
 
-    document.getElementById("choice4").style.display="block";
-    document.getElementById("submit4").style.display="block";
-    myQuestion.innerHTML = "yum breadsticks";
+    myQuestion.innerHTML = "yum breadsticks. You helped Kendera get a meal for her family, play again";
   }
   else if (myChoice === "wings") {
 
-    myQuestion.innerHTML = "The wings are a little spicy, but they are good.";
+    myQuestion.innerHTML = "The wings are a little spicy, but they are good. You helped Kendera get a meal for her family, play again";
   }
   else {
     myQuestion.innerHTML = "Invalid Answer";
   }
 }
+
+
+function myButton(){
+  location.reload();
+}
+
+function theForLoop()
+            {
+                for(var i = 0; i < 5; i++)
+                {
+                    document.write("Pizza!<br>");
+                }
+            }

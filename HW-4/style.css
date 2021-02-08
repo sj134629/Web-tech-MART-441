@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=Montserrat&display=swap');
+body {
+
+    background-color: #d9af79;
+    align-content: center;
+}
+.title{
+  background-color: #0a4a1f;
+  margin-left: 50px;
+  margin-right: 50px;
+  overflow: auto;
+  text-align: center;
+  color: white;
+
+}
+.bg {
+  background-color: #367d45;
+margin-left: 50px;
+margin-right: 50px;
+  padding: 1em;
+  overflow: auto;
+  text-align: center;
+  color: white;
+
+
+}
+.bg2 {
+  background-color: #367d45;
+margin-left: 50px;
+margin-right: 50px;
+  padding: 1em;
+  overflow: auto;
+  text-align: center;
+  color: white;
+
+
+}
+.bg3 {
+  background-color: #e3573b;
+margin-left: 50px;
+margin-right: 50px;
+  padding: 1em;
+  overflow: auto;
+  text-align: center;
+  color: white;
+
+
+}
+h1 {
+  font-family: 'Londrina Solid', cursive;
+}
+ button {
+   font-family: 'Londrina Solid', cursive;
+   padding: .5em;
+   background-color: #265f85;
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+ }
+ button:hover {
+   font-family: 'Londrina Solid', cursive;
+   padding: .5em;
+   background-color: #1a415c;
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+ }
+ div {
+   font-family: 'Montserrat', sans-serif;
+   padding: 0;
+ }
