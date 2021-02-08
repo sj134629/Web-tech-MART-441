@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="Width=device-width, initial-scale=1.0">
+    <meta name="discription" content="...">
+    <meta name="author" content="Samantha Jacobson">
+
+    <title>HW-4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+  </head>
+  <body>
+  <div>
+    <h1>Food Dilemma</h1>
+    <img src="./img/pizza.jpg" width="300" height="300">
+  </div>
+
+  <div>
+    
+    <label id="lblName">What is your name?</label><br>
+        <input id="txtName" type="text"><br>
+        <button id="btnSubmit" onclick="getName('hello');">Submit</button><br>
+  </div>
+<div id="question">
+  <br>
+  Kendera decides that she wants to get a meal for 4 at Bob's Pizza, but there are so many things to choose from. Kendera is also very indecisive and needs help figuring out what to get.
+ <br>
+ She walks into Bob's Pizza and she needs to order her food.
+ <br>
+ Her families favorite pizzas are cheese and all meat, but she has enough money for only one pizza.
+<br>
+</div>
+<div>
+
+<input type="text" id="choice" value="Enter cheese or meat">
+<button id="submit" onclick="getChoice1();">Submit</button>
+
+<input type="text" id="choice2" value="Enter coke or pepsi" style="display:none">
+<button id="submit2" onclick="getChoice2();" style="display:none">Submit</button>
+
+<input type="text" id="choice3" value="Enter sweet or salty" style="display:none">
+<button id="submit3" onclick="getChoice3();" style="display:none">Submit</button>
+
+<input type="text" id="choice4" value="Enter cookies or cake" style="display:none">
+<button id="submit4" onclick="getChoice4();" style="display:none">Submit</button>
+
+<input type="text" id="choice5" value="Enter breadsticks or wings" style="display:none">
+<button id="submit5" onclick="getChoice5();" style="display:none">Submit</button>
+
+
+</div>
+  </body>
+</html>
