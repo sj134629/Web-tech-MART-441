@@ -128,6 +128,7 @@ function getChoice5()
 
 function myButton(){
   location.reload();
+
 }
 
 function theForLoop()
@@ -137,3 +138,5 @@ function theForLoop()
                     document.write("Pizza!<br>");
                 }
             }
+
+document.getElementById("p2").style.color = "blue";
