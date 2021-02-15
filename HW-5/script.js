@@ -19,7 +19,7 @@ function printBlanks()
 
 function RandomImageArray()
 {
-    var matchImagePath = ["./images/cute.jpg", "./images/hide.jpeg", "./images/sphynx.jpg", "./images/yellow.jpg","./images/black.jpg", "./images/orange.jpg", "./images/baby.jpg", "./images/small.jpg", "./images/calico.jpg", "./images/white.jpg"];
+    var matchImagePath = ["./images/cute.jpg", "./images/hide.jpg", "./images/sphynx.jpg", "./images/yellow.jpg","./images/black.jpg", "./images/orange.jpg", "./images/baby.jpg", "./images/small.jpg", "./images/calico.jpg", "./images/white.jpg"];
     var count = [0,0,0,0,0,0,0,0,0,0];
     while(matchImages.length < 10)
     {

@@ -1,5 +1,10 @@
+#background{
+  background-color: pink;
+}
 .table {
-    width: 100%
+    width: 100%;
+
+
 }
 .tableCell{
   display: inline-block;
