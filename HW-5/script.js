@@ -20,12 +20,13 @@ function printBlanks()
 function RandomImageArray()
 {
     var matchImagePath = ["./images/cute.jpg", "./images/hide.jpeg", "./images/sphynx.jpg", "./images/yellow.jpg","./images/black.jpg", "./images/orange.jpg", "./images/baby.jpg", "./images/small.jpg", "./images/calico.jpg", "./images/white.jpg"];
+    var count = [0,0,0,0,0,0,0,0,0,0];
     while(matchImages.length < 10)
     {
 
         var randomNumber = Math.floor(Math.random() * matchImagePath.length)
 
-        if(count[randomNumber] < 2)
+        if(count[randomNumber] < 2);
         {
             matchImages.push(matchImagePath[randomNumber]);
 
