@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=Montserrat&display=swap');
+#background{
+  background-color: pink;
+}
+#background2{
+  background-color: #81c8c9;
+}
+.table {
+    width: 100%;
+
+
+}
+.tableCell{
+  display: inline-block;
+  padding: 1em;
+
+}
+h1 {
+  font-family: 'Londrina Solid', cursive;
+}
+div {
+  font-family: 'Londrina Solid', cursive;
+}
+button {
+  padding: .5em;
+  background-color: pink;
+  font-family: 'Londrina Solid', cursive;
+}
+button:hover {
+  padding: .5em;
+  background-color: #de8caa;
+  font-family: 'Londrina Solid', cursive;
+}
+input {
+  background-color:#dbd3b8;
+  font-family: 'Londrina Solid', cursive;
+}
