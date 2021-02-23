@@ -126,10 +126,9 @@ function playerInfo()
 
 function finalScore() {
   let player = playerInfo();
-  document.getElementById(firstNa).innerHTML = player.firstname;
-  document.getElementById(lastNa).innerHTML = player.lastname;
-  document.getElementById(ageNu).innerHTML = player.yourage;
-  document.getElementById(tries).innerHTML = player.attempts;
+  document.getElementById("firstNa").innerHTML = player.firstname;
+  document.getElementById("lastNa").innerHTML = player.lastname;
+  document.getElementById("ageNu").innerHTML = player.yourage;
+  document.getElementById("tries").innerHTML = player.attempts;
 
   }
-  
