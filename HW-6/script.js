@@ -7,9 +7,8 @@ var secondNumber = -1;
 var attempts = 0;
 var total = 0;
 //json container
-var player = {"firstname":"", "lastname":"", "yourage":"", "attempts":""};
-var attempts = 0;
-var total = 0;
+var player = {"firstname": "", "lastname": "", "yourage": "", "attempts": ""};
+
 
 function printBlanks()
 {
@@ -31,9 +30,9 @@ function RandomImageArray()
     while(matchImages.length < 10)
     {
 
-        var randomNumber = Math.floor(Math.random() * matchImagePath.length)
+        var randomNumber = Math.floor(Math.random() * matchImagePath.length);
 
-        if(count[randomNumber] < 2);
+        if(count[randomNumber] < 2)
         {
             matchImages.push(matchImagePath[randomNumber]);
 
@@ -49,6 +48,7 @@ function flipCard(number)
         secondNumber = number;
         document.getElementById(imageTags[number]).src = matchImages[secondNumber];
         attempts = attempts + 1;
+
     }
     else if(firstNumber < 0)
     {
@@ -61,7 +61,7 @@ function flipCard(number)
     if(matchImages[secondNumber] != matchImages[firstNumber] && firstNumber >= 0 && secondNumber >= 0)
     {
 
-        setTimeout(imagesDisappear, 500);
+        setTimeout(imagesDisappear, 1000);
     }
 
     else if(matchImages[secondNumber] == matchImages[firstNumber] && firstNumber >= 0 && secondNumber >= 0)
@@ -69,7 +69,7 @@ function flipCard(number)
 
         firstNumber = -1;
         secondNumber = -1;
-        total = total =1;
+        total = total + 1;
         if (total >= 5) {
           var player = playerInfo();
           player.attempts = attempts;
@@ -91,13 +91,19 @@ function imagesDisappear()
 }
 
 //first page (intro.html)
-
+function reSults(){
+  window.location = "final.html";
+}
+ function reStart(){
+   window.location = "intro.html";
+ }
 
 function addtoPlayer()
 {
     var firsTname = document.getElementById("firstName").value;
     player.firstname = firsTname;
     console.log(firsTname)
+
     var lasTname = document.getElementById("lastName").value;
     console.log(lasTname)
     player.lastname = lasTname;
@@ -112,26 +118,18 @@ function addtoPlayer()
 
 function playerInfo()
 {
-  var playerInformation = localStorage.getItem("playerInfo")
+  var playerInformation = localStorage.getItem("playerInfo");
   let player = JSON.parse(playerInformation);
-  console.log(player.firstname)
-  console.log(player.lastname)
-  console.log(player.yourage)
+  console.log(player);
   return player;
 }
 
 function finalScore() {
   let player = playerInfo();
-  document.getElementById(firstNa).innerhtml = player.firstname ;
-  document.getElementById(lastNa).innerhtml = player.lastname ;
-  document.getElementById(ageNu).innerhtml = player. yourage;
-  document.getElementById(tries).innerhtml = player. attempts;
-}
+  document.getElementById(firstNa).innerHTML = player.firstname;
+  document.getElementById(lastNa).innerHTML = player.lastname;
+  document.getElementById(ageNu).innerHTML = player.yourage;
+  document.getElementById(tries).innerHTML = player.attempts;
 
-
-function reSults(){
-  window.location = "final.html"
-}
- function reStart(){
-   window.location = "intro.html"
- }
+  }
+  
