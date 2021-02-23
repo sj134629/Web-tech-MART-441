@@ -1,9 +1,11 @@
 //second page (index.html)
-var imageTags = ["image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8", "image9", "image10",];
+var imageTags = ["image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8", "image9", "image10"];
 var blankImagePath = "./images/bgimg.jpg";
 var matchImages = new Array();
 var firstNumber = -1;
 var secondNumber = -1;
+var attempts = 0;
+var total = 0;
 //json container
 var player = {"firstname":"", "lastname":"", "yourage":"", "attempts":""};
 var attempts = 0;
@@ -24,7 +26,7 @@ function printBlanks()
 
 function RandomImageArray()
 {
-    var matchImagePath = ["./images/cute.jpg", "./images/hide.jpg", "./images/sphynx.jpg", "./images/yellow.jpg","./images/black.jpg", "./images/orange.jpg", "./images/baby.jpg", "./images/small.jpg", "./images/calico.jpg", "./images/white.jpg"];
+    var matchImagePath = ["./images/cute.jpg", "./images/hide.jpg", "./images/sphynx.jpg", "./images/yellow.jpg","./images/black.jpg"];
     var count = [0,0,0,0,0,0,0,0,0,0];
     while(matchImages.length < 10)
     {
@@ -58,7 +60,8 @@ function flipCard(number)
 
     if(matchImages[secondNumber] != matchImages[firstNumber] && firstNumber >= 0 && secondNumber >= 0)
     {
-        setTimeout(imagesDisappear, 1000);
+
+        setTimeout(imagesDisappear, 500);
     }
 
     else if(matchImages[secondNumber] == matchImages[firstNumber] && firstNumber >= 0 && secondNumber >= 0)
@@ -110,10 +113,11 @@ function addtoPlayer()
 function playerInfo()
 {
   var playerInformation = localStorage.getItem("playerInfo")
-  player = JSON.parse(playerInformation);
+  let player = JSON.parse(playerInformation);
   console.log(player.firstname)
   console.log(player.lastname)
   console.log(player.yourage)
+  return player;
 }
 
 function finalScore() {

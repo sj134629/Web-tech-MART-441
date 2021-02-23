@@ -11,7 +11,7 @@
 
 </head>
 
-<body onload="playerInfo();finalScore" id=background>
+<body onload="playerInfo();finalScore();" id=background>
   <center>
     <h1>Cat Matching Game</h1>
 </center>
@@ -20,8 +20,8 @@
     <div class="tableBody">
       <div class="tableRow">
         <div class="tableCell">Player: <span id="firstNa">Sam</span> <span id="lastNa">J</span> </div>
-          <div>Age: <span id="ageNu">idk</span></div>
-            <div><span id="tries">0</span> attempts! </div>
+        <div>Age: <span id="ageNu">idk</span></div>
+        <div>Finished in: <span id="tries">0</span> attempts! </div>
         <div class="tablecell"> <button id="submit" onclick="reStart();">Restart Game!</button></div>
 
       </div>
