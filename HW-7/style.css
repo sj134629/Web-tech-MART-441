@@ -1,0 +1,11 @@
+body{
+background-color: #f29bae;
+
+}
+
+  div {
+    padding: 1em;
+    background-color: #f2cd5e;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
