@@ -1,0 +1,4 @@
+# Samantha Jacobson
+## Assignment 8
+
+This assignment was ok the only thing that I really had issues with was trying to link jQuery to my code. I kept getting this error that said $ in not defined. It was because I kept writing it wrong. I tried to do it both download and cdn. What happend was I put <> around the src part of the link and thats what cause that error. other that that issue I just had some sintax errors. I was able to create a slide show that work ok. It's not the best looking but I was able to make the images fadeIn and fadeOut and change images. I was also able to move shapes and make text appear and disappear using fadeIn, fadeOut and toggle. I styled the webpage in my style.css sheet. I also created the shapes in the stylesheet. I wanted to do cirles because they are more cool so I added a radius to the square. Overall this assignment went ok and its ok looking
