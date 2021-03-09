@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=Montserrat&display=swap');
+
+body{
+        background-color: pink;
+    }
+
+
+#square {
+          width: 50px;
+          height: 50px;
+          background: purple;
+          border-radius: 50%;
+          position: absolute;
+          left: 520;
+          top: 365;
+      }
+
+#circle {
+          width: 50px;
+          height: 50px;
+          background: purple;
+          border-radius: 50%;
+          position: absolute;
+          left: 520;
+          top: 365;
+      }
+
+.stuff{
+       background: orange;
+       color:white;
+    }
+#first{
+  font-family: 'Montserrat', sans-serif;
+  background: #ed6d7e;
+  color:white;
+  left: 100;
+  top: 400;
+}
+#second{
+  font-family: 'Montserrat', sans-serif;
+  background: #d96271;
+  color:white;
+  left: 100;
+  top: 450;
+}
+
+#third{
+      font-family: 'Montserrat', sans-serif;
+      background: #ed6d7e;
+      color:white;
+      left: 100;
+      top: 00;
+      }
+div {
+  background-color: orange;
+  padding: .5em;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+h1 {
+  font-family: 'Londrina Solid', cursive;
+  padding: .5em;
+  margin-left: 200px;
+  margin-right: 200px;
+
+}
+p {
+  font-family: 'Montserrat', sans-serif;
+  padding: .5em;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+button {
+  font-family: 'Montserrat', sans-serif;
+  padding: .5em;
+  background-color: #ae38d9;
+  color: white;
+}
+button:hover {
+  padding: .5em;
+  background-color: #8b2bad;
+  color: white;
+}
