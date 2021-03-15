@@ -1,33 +1,44 @@
-
-
+[
     {
-      "date": "-300",
-      "description": "Pilgrims travel to the healing temples of Asclepieion to be cured of their ills. After a ritual purification the followers bring offerings or sacrifices.",
-      "lang": "en",
+        "name": "Clark Kent",
+        "superheroName": "Superman",
+        "city": "Metropolis",
+        "strength": 100
     },
-    "categories" : [
-      "By place",
-      "Greece"
-    ]
-  },
-
     {
-      "date": "-300",
-      "description": "Pyrrhus, the King of Epirus, is taken as a hostage to Egypt after the Battle of Ipsus and makes a diplomatic marriage with the princess Antigone, daughter of Ptolemy and Berenice.",
-      "lang": "en",
+        "name": "Bruce Wayne",
+        "superheroName": "Batman",
+        "city": "Gotham City",
+        "strength": 65
     },
-      "categories" : [
-         "By place",
-          "Egypt"
-        ]
-  },
-  {
-    "date": "-300",
-    "description": "Ptolemy concludes an alliance with King Lysimachus of Thrace and gives him his daughter Arsinoe II in marriage.",
-    "lang": "en",
-  },
-    "categories" : [
-       "By place",
-       "Egypt"
-      ]
-  }      
+    {
+        "name": "Peter Parker",
+        "superheroName": "Spider-man",
+        "city": "New York City",
+        "strength": 70
+    },
+    {
+        "name": "Tony Stark",
+        "superheroName": "Iron Man",
+        "city": "New York City",
+        "strength": 55
+    },
+    {
+        "name": "Princess Diana of Theyscira",
+        "superheroName": "Wonder Woman",
+        "city": "Theyscira",
+        "strength": 65
+    },
+    {
+        "name": "Barry Allen",
+        "superheroName": "The Flash",
+        "city": "Central City",
+        "strength": 60
+    },
+    {
+        "name": "Oliver Queen",
+        "superheroName": "Green Arrow",
+        "city": "Starling City",
+        "strength": 55
+    }
+]
