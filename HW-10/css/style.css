@@ -1,5 +1,5 @@
 #myCanvas {
-  border: purple;
+  border: green;
   border-style: solid;
   border-width: 10px;
   background-color: pink;
@@ -8,4 +8,19 @@
 canvas {
   width: 60%;
   height: 80%;
+}
+#background {
+  background-image: url("../images/arcade.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+div {
+  padding: .5em;
+  background-color: purple;
+  color: white;
+  margin-left: 300px;
+  margin-right: 300px;
 }

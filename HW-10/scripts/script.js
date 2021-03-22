@@ -2,8 +2,8 @@ var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var canCtx = canvas.getContext("2d");
 var x = 0;
-var y = canvas.height/2;
-var x2 = canvas.width/2;
+var y = canvas.height / 2;
+var x2 = canvas.width / 2;
 var y2 = 100;
 var canHeight = 50;
 var canWidth = 50;
@@ -52,26 +52,26 @@ class Square {
     }
 }
 
-// need to create the squares before we draw them
+
 createSquares();
-// display the squares on the basic canvas
+
 drawSquare();
 
-// this timer will move the second square around
-function drawBoth() {
-  ctx.fillStyle = square1.theColor;
-  canCtx.fillRect(x, y, canWidth, canHeight);
-  ctx.fillStyle = square2.theColor;
-  canCtx.fillRect(x2, y2, canWidth, canHeight);
 
-  setInterval(moveGreenSquare, 3000/60);
+function drawBoth() {
+    ctx.fillStyle = square1.theColor;
+    canCtx.fillRect(x, y, canWidth, canHeight);
+    ctx.fillStyle = square2.theColor;
+    canCtx.fillRect(x2, y2, canWidth, canHeight);
+
+    setInterval(moveGreenSquare, 3000);
 }
 
 
-// this function creates new instances of squares aka an update function
+
 function createSquares() {
-    square1 = new Square(x, y, canWidth, canHeight, "blue");
-    square2 = new Square(x2, y2, canWidth, canHeight, "green");
+    square1 = new Square(x, y, canWidth, canHeight, "purple");
+    square2 = new Square(x2, y2, canWidth, canHeight, "red");
     ctx.clearRect(0, 0, 1000, 1000);
     drawSquare();
 }
@@ -79,60 +79,58 @@ function createSquares() {
 // this function will randomly move the second square around the canvas
 function moveGreenSquare() {
 
-    square2.setX(Math.floor(Math.random() * canvas.width));
-    square2.setY(Math.floor(Math.random() * canvas.height));
+    square2.setX(Math.floor(Math.random() * canvas.width-square2.theWidth) + 10);
+    square2.setY(Math.floor(Math.random() * canvas.height-square2.theHeight) + 10);
 
-    drawSquare();
+    //drawSquare();
+    drawSquare2();
 }
 
-// this function just draws the squares to the canvas in their respective locations
+
 function drawSquare() {
 
     // possible square1 canvas collision
-    if (x >= (canvas.width - 5)){
-      x-=5
-      canCtx.fillRect(x, y, canWidth, canHeight);
-    }
-    else if(x < (canvas.width - canvas.width)){
-      x+=5
-      canCtx.fillRect(x, y, canWidth, canHeight);
-      }
-    else if(y >= (canvas.height - 5)){
-      y-=5
-      canCtx.fillRect(x, y, canWidth, canHeight);
-      }
-    else if(y < (canvas.height - canvas.height)){
-      y+=5
-      canCtx.fillRect(x, y, canWidth, canHeight);
-      }
-    else {
-      canCtx.fillRect(x, y, canWidth, canHeight);
+    if (x >= (canvas.width - 5)) {
+        x -= 5
+        canCtx.fillRect(x, y, canWidth, canHeight);
+    } else if (x < (canvas.width - canvas.width)) {
+        x += 5
+        canCtx.fillRect(x, y, canWidth, canHeight);
+    } else if (y >= (canvas.height - 5)) {
+        y -= 5
+        canCtx.fillRect(x, y, canWidth, canHeight);
+    } else if (y < (canvas.height - canvas.height)) {
+        y += 5
+        canCtx.fillRect(x, y, canWidth, canHeight);
+    } else {
+        canCtx.fillRect(x, y, canWidth, canHeight);
     }
 
 }
 
-function drawSquare2(){
-  //possible square2 canvas collision
-  createSquares();
-  if (x2 >= (canvas.width - 10)){
-    x2-=5
-    canCtx.fillRect(x2, y2, canWidth, canHeight);
-  }
-  else if(x < (canvas.width - canvas.width)){
-    x2+=5
-    canCtx.fillRect(x2, y2, canWidth, canHeight);
+function drawSquare2() {
+
+    ctx.clearRect(0, 0, 1000, 1000);
+    ctx.fillStyle = square1.theColor;
+    drawSquare();
+    ctx.fillStyle = square2.theColor;
+
+
+    if (square2.theX >= (canvas.width - 5)) {
+        square2.setX(square2.theX-5);
+        canCtx.fillRect(square2.theX, square2.theY, canWidth, canHeight);
+    } else if (square2.theX < (canvas.width - canvas.width)) {
+        square2.setX(square2.theX+5);
+        canCtx.fillRect(square2.theX, square2.theY, canWidth, canHeight);
+    } else if (square2.theY >= (canvas.height - 5)) {
+        square2.setY(square2.theY-5);
+        canCtx.fillRect(square2.theX, square2.theY, canWidth, canHeight);
+    } else if (square2.theY < (canvas.height - canvas.height)) {
+        square2.setY(square2.theY+5);
+        canCtx.fillRect(square2.theX, square2.theY, canWidth, canHeight);
+    } else {
+        canCtx.fillRect(square2.theX, square2.theY2, canWidth, canHeight);
     }
-  else if(y >= (canvas.height - 10)){
-    y2-=5
-    canCtx.fillRect(x2, y2, canWidth, canHeight);
-    }
-  else if(y2 < (canvas.height - canvas.height)){
-    y2+=5
-    canCtx.fillRect(x2, y2, canWidth, canHeight);
-    }
-  else {
-    canCtx.fillRect(x2, y2, canWidth, canHeight);
-}
 }
 
 
@@ -146,21 +144,20 @@ $(document).ready(function () {
 function getKey(event) {
 
     // only checking collision when a key is pressed
-    var didCollide = hasCollided(square1, square2,);
+    var didCollide = hasCollided(square1, square2, );
     // if a collision happens
     if (didCollide) {
-      x = 0;
-      y = canvas.height/2
-      x2 = canvas.width/2;
-      y2 = 50;
-      if (canWidth <= 10) {
-       canWidth = 10;
-       canHeight = 10;
-     }
-     else {
-       canWidth -= 5;
-       canHeight -= 5;
-     }
+        x = 0;
+        y = canvas.height / 2
+        x2 = canvas.width / 2;
+        y2 = 50;
+        if (canWidth <= 10) {
+            canWidth = 10;
+            canHeight = 10;
+        } else {
+            canWidth -= 5;
+            canHeight -= 5;
+        }
         // change the background color
         canvas.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")";
         // size of Squares get changed
@@ -190,19 +187,19 @@ function getKey(event) {
 
 // movement funtions
 function moveUp() {
-    y-=5;
+    y -= 5;
 }
 
 function moveDown() {
-    y+=5;
+    y += 5;
 }
 
 function moveLeft() {
-    x-=5;
+    x -= 5;
 }
 
 function moveRight() {
-    x+=5;
+    x += 5;
 }
 
 // collision function
