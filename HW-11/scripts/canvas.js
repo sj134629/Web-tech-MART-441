@@ -113,6 +113,26 @@ function getKey(event) {
             moveUp();
         }
         console.log("hit wall");
+        
+        drawSquare2();
+        drawSquare();
+
+
+    }
+    function moveUp() {
+        square1.y -= 10;
+    }
+
+    function moveDown() {
+        square1.y += 10;
+    }
+
+    function moveRight() {
+        square1.x += 10;
+    }
+
+    function moveLeft() {
+        square1.x -= 10;
     }
 //second collision
     for (var i = 0; i < grayArray.length; i++) {
@@ -144,9 +164,9 @@ function getKey(event) {
         }
         console.log("hit monster");
     }
-
+    drawSquare2();
     drawSquare();
- drawPoints();
+    drawPoints()
 
 }
 
