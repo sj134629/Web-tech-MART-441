@@ -2,8 +2,7 @@ var canvas;
 var ctx;
 var x = 50;
 var y = 50;
-var square1, square2
-
+var square1, square2;
 var direction;
 var questions;
 var squareArray = [];
@@ -33,10 +32,11 @@ function setup()
     $.getJSON("./data/info.json", function(data) {
         for(var i = 0; i < data.squares.length; i++)
         {
-            squareArray.push(new Square(data.squares[i].x,data.squares[i].y, data.squares[i].h, data.squares[i].w, data.squares[i].color));
+            squareArray.push(new Square(data.squares[i].x,data.squares[i].y, data.squares[i].h, data.squares[i].w, data.squares[i].color, data.squares[i].theCollectible));
         }
         drawSquare();
         drawSquare2();
+
     });
 
 
@@ -49,15 +49,16 @@ function setup2()
     ctx = canvas.getContext("2d");
 
     // create two objects
-    square3 = new Square(100,100,50,50,"#0000FF");
-    square4 = new Square(100,400,15,500,"#00FF00");
+    square1 = new Square(100,100,50,50,"#0000FF");
+    square2 = new Square(100,400,15,500,"#00FF00");
     $.getJSON("./data/square.json", function(data) {
         for(var i = 0; i < data.squares.length; i++)
         {
-            squareArray.push(new Square(data.squares[i].x,data.squares[i].y, data.squares[i].h, data.squares[i].w, data.squares[i].color));
+            squareArray.push(new Square(data.squares[i].x,data.squares[i].y, data.squares[i].h, data.squares[i].w, data.squares[i].color, data.squares[i].theCollectible));
         }
         drawSquare2();
         drawSquare();
+
     });
 
 
@@ -100,11 +101,11 @@ function getKey(event)
             break;
         }
 
-        //console.log(test2);
+        console.log(test2);
     }
     if(test || test2)
     {
-        lives--;
+
         points++;
         if(direction == "left")
         {
@@ -122,10 +123,10 @@ function getKey(event)
         {
             moveUp();
         }
-
+console.log("hit wall");
     }
     drawSquare();
-    drawSquare2();
+  
 
 }
 
@@ -150,34 +151,36 @@ function drawSquare()
 {
     ctx.clearRect(0,0,800,600);
     ctx.fillStyle = square1.mainColor;
-    ctx.fillRect(square1.x, square1.y, square1.width, square1.height);
+    ctx.fillRect(square1.x, square1.y, square1.width, square1.height, square1.theCollectible);
     ctx.fillStyle = square2.mainColor;
-    ctx.fillRect(square2.x, square2.y, square2.width, square2.height);
+    ctx.fillRect(square2.x, square2.y, square2.width, square2.height, square2.theCollectible);
     for(var i = 0; i < squareArray.length; i++)
     {
         ctx.fillStyle = squareArray[i].mainColor;
-        ctx.fillRect(squareArray[i].x, squareArray[i].y, squareArray[i].width, squareArray[i].height);
+        ctx.fillStyle = squareArray[i].theCollectible;
+        ctx.fillRect(squareArray[i].x, squareArray[i].y, squareArray[i].width, squareArray[i].height, squareArray[i].theCollectible);
     }
 
     ctx.font = "30px Arial";
-    ctx.fillText("Lives: " + lives, 10, 50);
+
 
 }
 function drawSquare2()
 {
     ctx.clearRect(0,0,800,600);
     ctx.fillStyle = square1.mainColor;
-    ctx.fillRect(square1.x, square1.y, square1.width, square1.height);
+    ctx.fillRect(square1.x, square1.y, square1.width, square1.height, square1.theCollectible);
     ctx.fillStyle = square2.mainColor;
-    ctx.fillRect(square2.x, square2.y, square2.width, square2.height);
+    ctx.fillRect(square2.x, square2.y, square2.width, square2.height, square2.theCollectible);
     for(var i = 0; i < squareArray.length; i++)
     {
         ctx.fillStyle = squareArray[i].mainColor;
-        ctx.fillRect(squareArray[i].x, squareArray[i].y, squareArray[i].width, squareArray[i].height);
+        ctx.fillStyle = squareArray[i].theCollectible;
+        ctx.fillRect(squareArray[i].x, squareArray[i].y, squareArray[i].width, squareArray[i].height, squareArray[i].theCollectible);
     }
 
     ctx.font = "30px Arial";
-    ctx.fillText("points: " + points, 200, 50);
+    ctx.fillText("points: " + points, 20, 50);
 
 }
 
