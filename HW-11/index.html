@@ -3,19 +3,28 @@
         <title>HW-11</title>
     </head>
     <script src="./libs/jquery-3.6.0.min.js" ></script>
-    <script src="scripts/squareclass.js"></script>
+<script src="scripts/squareclass.js"></script>
     <script src="scripts/canvas.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
     <style>
         #myCanvas{
             border:black;
             border-style: solid;
             border-width: 2px;
+            background-color: black;
 
         }
     </style>
-    <body>
-        <canvas id="myCanvas" height="600" width="800"></canvas>
-
+    <body id="background2">
+      <center>
+        <div>
+          <h1>Gray Killing Rainbow Game</h1>
+          <p>The object of the game it to get ride of the white and gray to keep everything colorful.</p>
+          <p><u><b>How to Play:</b></u> you need to use the W,A,S,D keys to move the player around an destroy the gray squares, but be carefull not to touch the rainbow obstacles(including the edges). </p>
+        </div>
+      <div><canvas id="myCanvas" height="600" width="800"></canvas></div>
+      </center>
 
     </body>
 </html>

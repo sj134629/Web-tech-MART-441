@@ -1,4 +1,4 @@
-{"squares":[{"x":510,"y":40,"h":30,"w":30,"color":"brown","collectible":"true"},
-    {"x":300,"y":320,"h":30,"w":30,"color":"brown", "collectible":"true"},
-    {"x":350,"y":450,"h":30,"w":30,"color":"brown", "collectible":"true"},
-    {"x":200,"y":480,"h":30,"w":30,"color":"brown", "collectible":"true"}]}
+{"squares":[{"x":510,"y":40,"h":30,"w":30,"color":"gray","collectible":"true"},
+    {"x":300,"y":320,"h":30,"w":30,"color":"#d1d1d1", "collectible":"true"},
+    {"x":350,"y":450,"h":30,"w":30,"color":"#a8a8a8", "collectible":"true"},
+    {"x":200,"y":480,"h":30,"w":30,"color":"white", "collectible":"true"}]}
