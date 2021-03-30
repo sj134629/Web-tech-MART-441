@@ -9,6 +9,7 @@ var squareArray = [];
 var grayArray = [];
 var lives = 3;
 var points = 0;
+var grey;
 $(document).ready(function () {
 
     setup();
@@ -113,7 +114,7 @@ function getKey(event) {
             moveUp();
         }
         console.log("hit wall");
-        
+
         drawSquare2();
         drawSquare();
 
@@ -136,7 +137,7 @@ function getKey(event) {
     }
 //second collision
     for (var i = 0; i < grayArray.length; i++) {
-
+    grey = grayArray[i]
         console.log(grayArray[i].theCollectible);
         test3 = hasCollided(square1, grayArray[i]);
 
@@ -149,7 +150,13 @@ function getKey(event) {
     if (test || test3) {
         if(test3)
         {
+
             points++;
+
+
+      document.getElementById("myCanvas").style = "background-color: #919091;";
+      setTimeout("returnColor();", 500);
+  
             console.log(points);
         }
 
@@ -187,7 +194,7 @@ function moveLeft() {
 }
 
 function drawSquare() {
-    ctx.clearRect(0, 0, 800, 600);
+
     ctx.fillStyle = square1.mainColor;
     ctx.fillRect(square1.x, square1.y, square1.width, square1.height, square1.theCollectible);
     ctx.fillStyle = square2.mainColor;
@@ -233,4 +240,7 @@ function hasCollided(object1, object2) {
             (object1.x > (object2.x + object2.width))
         );
 
+}
+function returnColor(){
+  document.getElementById("myCanvas").style = "background-color: black;";
 }
