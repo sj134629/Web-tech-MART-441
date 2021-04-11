@@ -80,9 +80,7 @@ function getControls(camera, renderer) {
 
 function loadModel() {
   var loader = new THREE.OBJLoader();
-  loader.load(
-    "./models/Cerberus.obj",
-    function (object) {
+  loader.load('./models/Cerberus.obj', function (object) {
       object.rotation.z = Math.PI;
       scene.add(object);
       document.querySelector("h1").style.display = "none";
