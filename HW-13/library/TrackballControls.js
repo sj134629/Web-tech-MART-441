@@ -1,12 +1,4 @@
-import {
-	EventDispatcher,
-	MOUSE,
-	Quaternion,
-	Vector2,
-	Vector3
-} from '../../../build/three.module.js';
-
-var TrackballControls = function ( object, domElement ) {
+THREE.TrackballControls = function ( object, domElement ) {
 
 	if ( domElement === undefined ) console.warn( 'THREE.TrackballControls: The second parameter "domElement" is now mandatory.' );
 	if ( domElement === document ) console.error( 'THREE.TrackballControls: "document" should not be used as the target "domElement". Please use "renderer.domElement" instead.' );
@@ -39,36 +31,36 @@ var TrackballControls = function ( object, domElement ) {
 
 	this.keys = [ 'KeyA' /*A*/, 'KeyS' /*S*/, 'KeyD' /*D*/ ];
 
-	this.mouseButtons = { LEFT: MOUSE.ROTATE, MIDDLE: MOUSE.DOLLY, RIGHT: MOUSE.PAN };
+	this.mouseButtons = { LEFT: THREE.MOUSE.ROTATE, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.PAN };
 
 	// internals
 
-	this.target = new Vector3();
+	this.target = new THREE.Vector3();
 
 	var EPS = 0.000001;
 
-	var lastPosition = new Vector3();
+	var lastPosition = new THREE.Vector3();
 	var lastZoom = 1;
 
 	var _state = STATE.NONE,
 		_keyState = STATE.NONE,
 
-		_eye = new Vector3(),
+		_eye = new THREE.Vector3(),
 
-		_movePrev = new Vector2(),
-		_moveCurr = new Vector2(),
+		_movePrev = new THREE.Vector2(),
+		_moveCurr = new THREE.Vector2(),
 
-		_lastAxis = new Vector3(),
+		_lastAxis = new THREE.Vector3(),
 		_lastAngle = 0,
 
-		_zoomStart = new Vector2(),
-		_zoomEnd = new Vector2(),
+		_zoomStart = new THREE.Vector2(),
+		_zoomEnd = new THREE.Vector2(),
 
 		_touchZoomDistanceStart = 0,
 		_touchZoomDistanceEnd = 0,
 
-		_panStart = new Vector2(),
-		_panEnd = new Vector2();
+		_panStart = new THREE.Vector2(),
+		_panEnd = new THREE.Vector2();
 
 	// for reset
 
@@ -100,7 +92,7 @@ var TrackballControls = function ( object, domElement ) {
 
 	var getMouseOnScreen = ( function () {
 
-		var vector = new Vector2();
+		var vector = new THREE.Vector2();
 
 		return function getMouseOnScreen( pageX, pageY ) {
 
@@ -117,7 +109,7 @@ var TrackballControls = function ( object, domElement ) {
 
 	var getMouseOnCircle = ( function () {
 
-		var vector = new Vector2();
+		var vector = new THREE.Vector2();
 
 		return function getMouseOnCircle( pageX, pageY ) {
 
@@ -134,12 +126,12 @@ var TrackballControls = function ( object, domElement ) {
 
 	this.rotateCamera = ( function () {
 
-		var axis = new Vector3(),
-			quaternion = new Quaternion(),
-			eyeDirection = new Vector3(),
-			objectUpDirection = new Vector3(),
-			objectSidewaysDirection = new Vector3(),
-			moveDirection = new Vector3(),
+		var axis = new THREE.Vector3(),
+			quaternion = new THREE.Quaternion(),
+			eyeDirection = new THREE.Vector3(),
+			objectUpDirection = new THREE.Vector3(),
+			objectSidewaysDirection = new THREE.Vector3(),
+			moveDirection = new THREE.Vector3(),
 			angle;
 
 		return function rotateCamera() {
@@ -251,9 +243,9 @@ var TrackballControls = function ( object, domElement ) {
 
 	this.panCamera = ( function () {
 
-		var mouseChange = new Vector2(),
-			objectUp = new Vector3(),
-			pan = new Vector3();
+		var mouseChange = new THREE.Vector2(),
+			objectUp = new THREE.Vector3(),
+			pan = new THREE.Vector3();
 
 		return function panCamera() {
 
@@ -743,7 +735,5 @@ var TrackballControls = function ( object, domElement ) {
 
 };
 
-TrackballControls.prototype = Object.create( EventDispatcher.prototype );
-TrackballControls.prototype.constructor = TrackballControls;
-
-export { TrackballControls };
+THREE.TrackballControls.prototype = Object.create( THREE.EventDispatcher.prototype );
+THREE.TrackballControls.prototype.constructor = THREE.TrackballControls;
