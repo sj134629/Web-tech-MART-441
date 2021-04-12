@@ -1,0 +1,4 @@
+# Samantha Jacobson
+## Assignment 13
+
+So this Assignment was a mess for me, but I eventually figured it out. I had the hardest time with the set up and the files that I had to incorporate into my code, so I could load a model. I went through the examples in the course website and I first started with trying to as a cube that rotates. I was able to get it to show up, but when it came to adding a model the TrackballControls  file kept it from showing up. I had to get help from my classmates and professor. The code in the TrackballControls was actually the wrong code and once it got changed it eventually worked. Once I was able to get it to work I was able to add multiple shapes to it and make then rotate arount the model. I added another model and in order to see both you have to zoom in and out.

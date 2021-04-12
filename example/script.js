@@ -1,6 +1,6 @@
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-var cube, cube2, cube3;
+var cube, cube2;
 
 var scene = getScene();
 var camera = getCamera();
@@ -64,37 +64,11 @@ function animate2() {
 
 }
 
-function createBox3() {
-
-  var geometry = new THREE.ConeGeometry();
-  var material = new THREE.MeshBasicMaterial({
-    color: 0xafffaa
-  });
-  cube3 = new THREE.Mesh(geometry, material);
-  cube3.position.set(4, 0);
-  cube.add(cube3);
-  cube3.scale.x = .7;
-  cube3.scale.y = .7;
-  cube3.scale.z = .1;
-
-  animate3();
-}
-
-
-function animate3() {
-  requestAnimationFrame(animate3);
-  cube3.rotation.x += 0.1;
-  cube3.rotation.y += 0.1;
-
-
-}
-
-
 
 
 function getScene() {
   var scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xafff);
+  scene.background = new THREE.Color(0xaaafff);
   return scene;
 }
 
@@ -103,7 +77,7 @@ function getScene() {
 function getCamera() {
   var aspectRatio = window.innerWidth / window.innerHeight;
   var camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
-  camera.position.set(0, 100, -10);
+  camera.position.set(0, 90, -10);
   return camera;
 }
 
@@ -116,12 +90,10 @@ function getLight(scene) {
   light.position.set(20, 50, 20);
   scene.add(light);
 
-  var ambientLight = new THREE.AmbientLight(0x100aaa);
+  var ambientLight = new THREE.AmbientLight(0x14444);
   scene.add(ambientLight);
   return light;
 }
-
-
 
 
 
@@ -158,29 +130,12 @@ function loadModel() {
   var loader = new THREE.OBJLoader();
   loader.load('./models/Cerberus.obj', function (object) {
     object.rotation.z = Math.PI;
-    object.rotation.x = Math.PI;
-    object.rotation.y = Math.PI;
-
     scene.add(object);
 animate();
-animate2();
-animate3();
   });
 }
 
-function loadModel2() {
-  var loader = new THREE.OBJLoader();
-  loader.load('./models/emerald.obj', function (object) {
-    object.rotation.z = Math.PI;
-    object.rotation.x = Math.PI;
 
-
-    scene.add(object);
-animate();
-animate2();
-animate3();
-  });
-}
 
 function render() {
   requestAnimationFrame(render);
@@ -190,7 +145,7 @@ function render() {
 };
 
 
-createBox3();
-loadModel();
-loadModel2();
+
+loadModel()
+
 render();
