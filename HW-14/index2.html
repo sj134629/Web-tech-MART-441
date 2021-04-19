@@ -1,0 +1,47 @@
+<html>
+   <head>
+      <title>HW-15/info</title>
+      <style>
+         body{
+            background-color: pink;
+         }
+      </style>
+      <link rel="stylesheet" href="style.css">
+      <script>
+         function refreshPage()
+         {
+            const params = new URLSearchParams(window.location.search)
+            var fName = params.get("firstName");
+            var lName = params.get("lastName");
+            var tName = params.get("ageName");
+            var cName = params.get("colorName");
+            var aName = params.get("animalName");
+            var refresh = params.has("norefresh");
+            if(!refresh)
+            {
+               window.location = "index2.html?firstName=" + fName + "&lastName=" + lName + "&ageName=" + tName + "&colorName=" + cName + "&animalName=" + aName + "&norefresh=1";
+            }
+
+         }
+      </script>
+   </head>
+
+   <body onload="refreshPage();">
+     <div>
+
+<center>
+     <h1>
+       Thanks for your information!!!
+     </h1>
+     <h3><u>Here is your info:</u></h3>
+     <br>
+</center>
+ <div id=info>
+
+     <b><span>Your Name : Samantha Jacobson<br>Your Age : 12<br>Your favorite color : red<br>Your favorite Animal : bat</span></b>
+
+</div>
+
+</div>
+   </body>
+</html>

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=Montserrat&display=swap');
+
+
+body {
+  background-color: #46c4f2;
+}
+div {
+  background-color: purple;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 200px;
+  padding: 2em;
+  border-radius: 15px;
+}
+h1 {
+  font-family: 'Londrina Solid', cursive;
+  color: white;
+}
+span {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+td {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+input {
+background-color: #46f274;
+border-radius: 15px;
+}
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+span {
+  font-family: 'Montserrat', sans-serif;
+color: black;
+
+}
+ #info {
+   background-color: #46f274;
+   margin-left: 100px;
+   margin-right: 100px;
+   margin-top: 0px;
+   padding: 2em;
+
+
+   border-radius: 15px;
+ }
