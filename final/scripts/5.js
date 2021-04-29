@@ -1,36 +1,24 @@
-var c;
-
-function toInstuctions()
-{
-  window.location="index2.html";
-}
-function toGame()
-{
-  window.location="game.html";
-}
-
-//sprite 1
 var canvas = document.querySelector("canvas");
 var c = canvas.getContext("2d");
 
 
 //create empty array
 var images = [];
-images.length = 7;
+images.length = 3;
 
 //push images into array
 
 for(var i = 1 ; i < images.length ; i++){
   images[i] = new Image();
-  images[i].src = "./sprites/girl1/girl (0" + i.toString() + ").png";
+  images[i].src = "./sprites/crypink/pinkc (0" + i.toString() + ").png";
 
 }
 
 var i = 1;
 setInterval(function(){
   i++;
-  if(i >= 7){
+  if(i >= 3){
     i = 1;
   }
   c.drawImage(images[i],-40,-20,600,520)
-},400)
+},1000)

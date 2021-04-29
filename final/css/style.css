@@ -11,17 +11,27 @@ body {
   margin-top: 10px;
   border-radius: 15px;
 }
+#canvas2 {
+  background-color: #fcd9e5;
+  margin-top: 10px;
+  border-radius: 15px;
+}
 div {
 }
  #story {
-  margin-left: 400px;
-  margin-right: 400px;
+
 background-color: white;
+width: 490px;
 margin-top: 0px;
 border-radius: 15px;
 padding: 1em;
 font-family: 'Open Sans', sans-serif;
 font-weight: bold;
+ }
+ p {
+   margin-left: 200px;
+   margin-right: 200px;
+   font-family: 'Open Sans', sans-serif;
  }
 
  button {

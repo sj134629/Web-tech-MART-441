@@ -1,15 +1,3 @@
-var c;
-
-function toInstuctions()
-{
-  window.location="index2.html";
-}
-function toGame()
-{
-  window.location="game.html";
-}
-
-//sprite 1
 var canvas = document.querySelector("canvas");
 var c = canvas.getContext("2d");
 
@@ -22,7 +10,7 @@ images.length = 7;
 
 for(var i = 1 ; i < images.length ; i++){
   images[i] = new Image();
-  images[i].src = "./sprites/girl1/girl (0" + i.toString() + ").png";
+  images[i].src = "./sprites/bluestyleup/blueu (0" + i.toString() + ").png";
 
 }
 
@@ -33,4 +21,4 @@ setInterval(function(){
     i = 1;
   }
   c.drawImage(images[i],-40,-20,600,520)
-},400)
+},500)

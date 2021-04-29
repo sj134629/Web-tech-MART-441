@@ -3,71 +3,104 @@ function storyFunction(choice) {
     var answer2 = document.getElementById("choice2").innerHTML;
   //first choices
     if (choice == 1 && answer1 == "Yes") {
-        document.getElementById("story").innerHTML = "A unicorn approaches you, what do you do?";
-        document.getElementById("choice1").innerHTML = "Pet it";
-        document.getElementById("choice2").innerHTML = "Stab it";
+        document.getElementById("story").innerHTML = "Mari is thinking about changing up her look. what should she change?";
+        document.getElementById("choice1").innerHTML = "Her hair";
+        document.getElementById("choice2").innerHTML = "Her Makeup";
     } else if (choice == 2 && answer2 == "No") {
-        document.getElementById("story").innerHTML = "You are going to play whether you like it or not. Your quest is you find a sword in the ground. What do you you do?";
-        document.getElementById("choice1").innerHTML = "Leave it";
-        document.getElementById("choice2").innerHTML = "Attempt to pull it out of the ground";
-
-    //yes Quest//
-} else if (choice == 1 && answer1 == "Pet it") {
-        document.getElementById("story").innerHTML = "You have now gained a new friend, but a nymth comes and takes your unicorn away. What do you do?";
-        document.getElementById("choice1").innerHTML = "Do nothing";
-        document.getElementById("choice2").innerHTML = "Fight the nymth";
-
-      } else if (choice == 2 && answer2 == "Stab it") {
-        document.getElementById("story").innerHTML = "You MONSTER!!! How could you hurt this magnificent creature?! The unicorn screams and gets angry. It turns it's head and stabs you back and you die.";
+        document.getElementById("story").innerHTML = "You are going to play whether you like it or not.";
         document.getElementById("choice1").innerHTML = "Play Again!";
         document.getElementById("choice2").innerHTML = "Restart";
 
-//yes Pet it,  2nd choices
-} else if (choice == 1 && answer1 == "Do nothing") {
-        document.getElementById("story").innerHTML = "You lost your friend because you don't care enough to save your friend.";
+    //Hair Quest//
+} else if (choice == 1 && answer1 == "Her hair") {
+        document.getElementById("story").innerHTML = "What hair color should Mari do?";
+        document.getElementById("choice1").innerHTML = "Blue";
+        document.getElementById("choice2").innerHTML = "Pink";
+
+      } else if (choice == 2 && answer2 == "Her Makeup") {
+        document.getElementById("story").innerHTML = "What color eyeshadow should Mari wear?";
+        document.getElementById("choice1").innerHTML = "Purple";
+        document.getElementById("choice2").innerHTML = "pink";
+
+//hair her hair,  2nd choices
+} else if (choice == 1 && answer1 == "Blue") {
+        window.location="game2.html";
+
+    } else if (choice == 2 && answer2 == "Pink") {
+        window.location="game3.html";
+
+// hair does she look good blue, 3rd choice
+} else if (choice == 1 && answer1 == "Yes she does") {
+  document.getElementById("story").innerHTML =  "Should she wear it up or down?";
+  document.getElementById("choice1").innerHTML = "UP";
+  document.getElementById("choice2").innerHTML = "Down";
+
+    } else if (choice == 2 && answer2 == "No she doesn't") {
+        window.location="game4.html";
+// hair does she look good pink, 3rd choice
+} else if (choice == 1 && answer1 == "Yes she looks good") {
+        document.getElementById("story").innerHTML =  "Should she wear it up or down?";
+        document.getElementById("choice1").innerHTML = "Wear it up";
+        document.getElementById("choice2").innerHTML = "Wear it down";
+
+      } else if (choice == 2 && answer2 == "No she does not") {
+              window.location="game5.html";
+
+//hair her hair blue,  4th choices
+} else if (choice == 1 && answer1 == "UP") {
+              window.location="style1.html";
+
+} else if (choice == 2 && answer2 == "Down") {
+              window.location="style2.html";
+
+  //hair her hair pink,  4th choices
+} else if (choice == 1 && answer1 == "Wear it up") {
+              window.location="style3.html";
+
+} else if (choice == 2 && answer2 == "Wear it down") {
+              window.location="style4.html";
+
+//yes her eyes Makeup,  2nd choices
+} else if (choice == 1 && answer1 == "Purple") {
+              window.location="game6.html";
+
+} else if (choice == 2 && answer2 == "pink") {
+              window.location="game7.html";
+
+
+//yes her lip Makeup,  3rd choices
+} else if (choice == 1 && answer1 == "Red.") {
+              window.location="game8.html";
+
+} else if (choice == 2 && answer2 == "Pink.") {
+              window.location="game9.html";
+//yes Makeup purple fourth choice
+} else if (choice == 1 && answer1 == "She looks gorgous") {
+        document.getElementById("story").innerHTML =  "Thanks for the help Mari enjoys her new look. Play Again!";
         document.getElementById("choice1").innerHTML = "Play Again!";
         document.getElementById("choice2").innerHTML = "Restart";
 
-    } else if (choice == 2 && answer2 == "Fight the nymth") {
-        document.getElementById("story").innerHTML =  "You fight the nymth because you do not want to lose your unicorn, but the nymth that you are going up against is a fire nymth. You need to use a weapon that with defeat it. Which weapon do you use?";
-        document.getElementById("choice1").innerHTML = "Water sword";
-        document.getElementById("choice2").innerHTML = "Ice sword";
+} else if (choice == 2 && answer2 == "She looks ugly") {
+        window.location="game12.html";
 
-// yes fight nymth, 3rd choice
-} else if (choice == 1 && answer1 == "Water sword") {
-        document.getElementById("story").innerHTML = "Victory! You have put out the flame with your water sword. The nymth dies and you get your unicorn back. You Win!!. Play Again!";
+
+
+//yes Makeup purple fourth chouce
+} else if (choice == 1 && answer1 == "She looks good") {
+        document.getElementById("story").innerHTML =  "Thanks for the help Mari enjoys her new look. Play Again!";
         document.getElementById("choice1").innerHTML = "Play Again!";
         document.getElementById("choice2").innerHTML = "Restart";
 
-    } else if (choice == 2 && answer2 == "Ice sword") {
-        document.getElementById("story").innerHTML =  "You picked the wrong weapon. The nymth has melted your sword away and has burned you to smitherings. You are now dead.";
-        document.getElementById("choice1").innerHTML = "Play Again!";
-        document.getElementById("choice2").innerHTML = "Restart";
+} else if (choice == 2 && answer2 == "No she looks ugly") {
+        window.location="game12.html";
 
 
-//No quest//
-} else if (choice == 1 && answer1 == "Leave it") {
-        document.getElementById("story").innerHTML = "Since you left the sword, there is nothing else to do but restart";
-        document.getElementById("choice1").innerHTML = "Play Again!";
-        document.getElementById("choice2").innerHTML = "Restart";
+//yes Makeup pink eyes blush choice
+} else if (choice == 1 && answer1 == "She should wear red") {
+              window.location="game10.html";
 
-    } else if (choice == 2 && answer2 == "Attempt to pull it out of the ground") {
-        document.getElementById("story").innerHTML = "It took a lot of your strength, but you were able to pull the sword out of the ground. Once you pulled it out of the ground an army of gnomes jumps out of the forest and they start to yell and run towards you with weapons. What do you do? ";
-        document.getElementById("choice1").innerHTML = "Stand and fight them";
-        document.getElementById("choice2").innerHTML = "Run";
-
-
-      } else if (choice == 1 && answer1 == "Stand and fight them") {
-              document.getElementById("story").innerHTML = "You bravely stand and fight against these 10 inche vicious beast. You slice them with your holy ground sword and defeat the gnomes. Victory to you.";
-              document.getElementById("choice1").innerHTML = "Play Again!";
-              document.getElementById("choice2").innerHTML = "Restart";
-
-          } else if (choice == 2 && answer2 == "Run") {
-              document.getElementById("story").innerHTML = "Don't be fooled. Gnomes are actually quite fast and very vicious. You tried to out run them, but they caught up to you. They jump on you and rip you to shreds. You are now dead. ";
-              document.getElementById("choice1").innerHTML = "Play Again!";
-              document.getElementById("choice2").innerHTML = "Restart";
-
-
+} else if (choice == 2 && answer2 == "She should wear pink") {
+              window.location="game11.html";
 
 // choices in all to restart
 } else if (choice == 1 && answer1 == "Play Again!") {
